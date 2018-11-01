@@ -30,6 +30,26 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:khj_cph/mml-wp.git"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.7.4",
+        "type": "wordpress-muplugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
     }
   ],
   "require": {
@@ -39,7 +59,14 @@
     "johnpbloch/wordpress": "4.9.8",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "roots/wp-config": "1.0.0"
+    "roots/wp-config": "1.0.0",
+    "roots/soil": "^3.7",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.7.4",
+    "wpackagist-plugin/acf-to-rest-api": "^3.1",
+    "wpackagist-plugin/wider-admin-menu": "^1.2",
+    "wpackagist-plugin/wp-nested-pages": "^3.0",
+    "wpackagist-plugin/tinymce-advanced":"4.8.0",
+    "khj_cph/mml-wp": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
