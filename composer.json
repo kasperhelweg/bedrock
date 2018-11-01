@@ -60,12 +60,12 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-config": "1.0.0",
+    "roots/soil": "^3.7",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.7.4",
     "wpackagist-plugin/acf-to-rest-api": "^3.1",
     "wpackagist-plugin/wider-admin-menu": "^1.2",
     "wpackagist-plugin/wp-nested-pages": "^3.0",
     "wpackagist-plugin/tinymce-advanced":"4.8.0",
-    "roots/soil": "^3.7",
     "khj_cph/mml-wp": "dev-master"
   },
   "require-dev": {
