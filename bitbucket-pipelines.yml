@@ -1,0 +1,37 @@
+image: williamyeh/ansible:alpine3-onbuild
+
+pipelines:
+  custom:
+    alpha:
+      - step:
+          script:
+            - apk update
+            - apk add bash
+            - apk add openssh
+            - eval "$(ssh-agent -s)"
+            - ssh-add /opt/atlassian/pipelines/agent/data/id_rsa
+            - export ANSIBLE_VAULT_PASSWORD_FILE=/opt/atlassian/pipelines/agent/build/config/ops/pipelines/vault-env
+            - cd config/ops
+            - ./bin/deploy.sh staging alpha
+    beta:
+      - step:
+          script:
+            - apk update
+            - apk add bash
+            - apk add openssh
+            - eval "$(ssh-agent -s)"
+            - ssh-add /opt/atlassian/pipelines/agent/data/id_rsa
+            - export ANSIBLE_VAULT_PASSWORD_FILE=/opt/atlassian/pipelines/agent/build/config/ops/pipelines/vault-env
+            - cd config/ops
+            - ./bin/deploy.sh staging beta
+    production:
+      - step:
+          script:
+            - apk update
+            - apk add bash
+            - apk add openssh
+            - eval "$(ssh-agent -s)"
+            - ssh-add /opt/atlassian/pipelines/agent/data/id_rsa
+            - export ANSIBLE_VAULT_PASSWORD_FILE=/opt/atlassian/pipelines/agent/build/config/ops/pipelines/vault-env
+            - cd config/ops
+            - ./bin/deploy.sh production production
