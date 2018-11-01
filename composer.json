@@ -74,7 +74,13 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "roots/soil",
+        "wpackagist-plugin/acf-to-rest-api",
+        "wpackagist-plugin/wp-nested-pages",
+        "wpackagist-plugin/tinymce-advanced"
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
