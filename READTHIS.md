@@ -80,8 +80,8 @@ First ssh into your server instance as the web user
     ssh web@server_ip
     ssh-keygen -t rsa -b 4096 -C "<your_email_initials>+deploy@molamil.com"
 
-Copy the generated public key and add it to the bitbucket repo(settings/access keys).  
-Next generate a bitbucket key(pipelines/SSH keys). Add the generated key to the web users authorized_keys. Also, add the server instance to bitbuckets known hosts by fetching its fingerprint.
+Copy the generated public key and add it to your bitbucket repo. Also, add the server instance to bitbuckets known hosts by fetching its fingerprint.
+Next generate a bitbucket key and add the generated key to the web users authorized_keys. 
 
 Since the vault files are encrypted, the docker-image will need access to the vault master password. Currently this is set as a global bitbucket environment variable called `ANSIBLE_VAULT_PASSWORD`
 
